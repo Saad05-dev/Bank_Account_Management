@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.fsa</groupId>
-	<artifactId>BankAccountManagement</artifactId>
+	<artifactId>Bank_Account_Management</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>
