@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" font-family="Arial, sans-serif" font-size="13">
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">bank_db — Entity Relationship Diagram</text>
+
+  <!-- ===== USER TABLE ===== -->
+  <rect x="40" y="60" width="220" height="290" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"/>
+  <!-- Header -->
+  <rect x="40" y="60" width="220" height="36" rx="8" fill="#0F6E56"/>
+  <rect x="40" y="80" width="220" height="16" fill="#0F6E56"/>
+  <text x="150" y="83" text-anchor="middle" font-weight="bold" fill="#ffffff" font-size="14">USER</text>
+  <!-- Rows -->
+  <rect x="40" y="96" width="220" height="28" fill="#E1F5EE"/>
+  <text x="56" y="114" fill="#085041" font-weight="bold">id</text>
+  <text x="250" y="114" text-anchor="end" fill="#0F6E56" font-size="11">BIGINT PK</text>
+
+  <rect x="40" y="124" width="220" height="28" fill="#f0faf6"/>
+  <text x="56" y="142" fill="#085041">username</text>
+  <text x="250" y="142" text-anchor="end" fill="#444" font-size="11">VARCHAR(100)</text>
+
+  <rect x="40" y="152" width="220" height="28" fill="#E1F5EE"/>
+  <text x="56" y="170" fill="#085041">email</text>
+  <text x="250" y="170" text-anchor="end" fill="#444" font-size="11">VARCHAR(255)</text>
+
+  <rect x="40" y="180" width="220" height="28" fill="#f0faf6"/>
+  <text x="56" y="198" fill="#085041">email_verified_at</text>
+  <text x="250" y="198" text-anchor="end" fill="#444" font-size="11">TIMESTAMP</text>
+
+  <rect x="40" y="208" width="220" height="28" fill="#E1F5EE"/>
+  <text x="56" y="226" fill="#085041">password</text>
+  <text x="250" y="226" text-anchor="end" fill="#444" font-size="11">VARCHAR(255)</text>
+
+  <rect x="40" y="236" width="220" height="28" fill="#f0faf6"/>
+  <text x="56" y="254" fill="#085041">status</text>
+  <text x="250" y="254" text-anchor="end" fill="#444" font-size="11">BOOLEAN</text>
+
+  <rect x="40" y="264" width="220" height="28" fill="#E1F5EE"/>
+  <text x="56" y="282" fill="#085041">created_at</text>
+  <text x="250" y="282" text-anchor="end" fill="#444" font-size="11">TIMESTAMP</text>
+
+  <rect x="40" y="292" width="220" height="28" fill="#f0faf6"/>
+  <text x="56" y="310" fill="#085041">phone</text>
+  <text x="250" y="310" text-anchor="end" fill="#444" font-size="11">VARCHAR(20)</text>
+
+  <rect x="40" y="320" width="220" height="30" rx="8" fill="#f0faf6"/>
+  <rect x="40" y="320" width="220" height="22" fill="#f0faf6"/>
+
+
+  <!-- ===== ACCOUNT TABLE ===== -->
+  <rect x="340" y="60" width="220" height="262" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"/>
+  <!-- Header -->
+  <rect x="340" y="60" width="220" height="36" rx="8" fill="#534AB7"/>
+  <rect x="340" y="80" width="220" height="16" fill="#534AB7"/>
+  <text x="450" y="83" text-anchor="middle" font-weight="bold" fill="#ffffff" font-size="14">ACCOUNT</text>
+  <!-- Rows -->
+  <rect x="340" y="96" width="220" height="28" fill="#EEEDFE"/>
+  <text x="356" y="114" fill="#26215C" font-weight="bold">id</text>
+  <text x="550" y="114" text-anchor="end" fill="#534AB7" font-size="11">BIGINT PK</text>
+
+  <rect x="340" y="124" width="220" height="28" fill="#f5f4ff"/>
+  <text x="356" y="142" fill="#26215C">user_id</text>
+  <text x="550" y="142" text-anchor="end" fill="#534AB7" font-size="11">BIGINT FK</text>
+
+  <rect x="340" y="152" width="220" height="28" fill="#EEEDFE"/>
+  <text x="356" y="170" fill="#26215C">balance</text>
+  <text x="550" y="170" text-anchor="end" fill="#444" font-size="11">DECIMAL(15,2)</text>
+
+  <rect x="340" y="180" width="220" height="28" fill="#f5f4ff"/>
+  <text x="356" y="198" fill="#26215C">account_number</text>
+  <text x="550" y="198" text-anchor="end" fill="#444" font-size="11">VARCHAR(20)</text>
+
+  <rect x="340" y="208" width="220" height="28" fill="#EEEDFE"/>
+  <text x="356" y="226" fill="#26215C">status</text>
+  <text x="550" y="226" text-anchor="end" fill="#444" font-size="11">BOOLEAN</text>
+
+  <rect x="340" y="236" width="220" height="28" fill="#f5f4ff"/>
+  <text x="356" y="254" fill="#26215C">created_at</text>
+  <text x="550" y="254" text-anchor="end" fill="#444" font-size="11">TIMESTAMP</text>
+
+  <rect x="340" y="264" width="220" height="28" fill="#EEEDFE"/>
+  <text x="356" y="282" fill="#26215C">updated_at</text>
+  <text x="550" y="282" text-anchor="end" fill="#444" font-size="11">TIMESTAMP</text>
+
+  <rect x="340" y="292" width="220" height="30" rx="8" fill="#f5f4ff"/>
+  <rect x="340" y="292" width="220" height="22" fill="#f5f4ff"/>
+
+
+  <!-- ===== TRANSACTION TABLE ===== -->
+  <rect x="640" y="60" width="220" height="234" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+  <!-- Header -->
+  <rect x="640" y="60" width="220" height="36" rx="8" fill="#185FA5"/>
+  <rect x="640" y="80" width="220" height="16" fill="#185FA5"/>
+  <text x="750" y="83" text-anchor="middle" font-weight="bold" fill="#ffffff" font-size="14">TRANSACTION</text>
+  <!-- Rows -->
+  <rect x="640" y="96" width="220" height="28" fill="#E6F1FB"/>
+  <text x="656" y="114" fill="#042C53" font-weight="bold">id</text>
+  <text x="850" y="114" text-anchor="end" fill="#185FA5" font-size="11">BIGINT PK</text>
+
+  <rect x="640" y="124" width="220" height="28" fill="#f0f7fe"/>
+  <text x="656" y="142" fill="#042C53">account_id</text>
+  <text x="850" y="142" text-anchor="end" fill="#185FA5" font-size="11">BIGINT FK</text>
+
+  <rect x="640" y="152" width="220" height="28" fill="#E6F1FB"/>
+  <text x="656" y="170" fill="#042C53">amount</text>
+  <text x="850" y="170" text-anchor="end" fill="#444" font-size="11">DECIMAL(15,2)</text>
+
+  <rect x="640" y="180" width="220" height="28" fill="#f0f7fe"/>
+  <text x="656" y="198" fill="#042C53">target_account_id</text>
+  <text x="850" y="198" text-anchor="end" fill="#185FA5" font-size="11">BIGINT FK</text>
+
+  <rect x="640" y="208" width="220" height="28" fill="#E6F1FB"/>
+  <text x="656" y="226" fill="#042C53">type_of_transaction</text>
+  <text x="850" y="226" text-anchor="end" fill="#444" font-size="11">VARCHAR(50)</text>
+
+  <rect x="640" y="236" width="220" height="28" fill="#f0f7fe"/>
+  <text x="656" y="254" fill="#042C53">time_of_transaction</text>
+  <text x="850" y="254" text-anchor="end" fill="#444" font-size="11">TIMESTAMP</text>
+
+  <rect x="640" y="264" width="220" height="30" rx="8" fill="#f0f7fe"/>
+  <rect x="640" y="264" width="220" height="22" fill="#f0f7fe"/>
+
+
+  <!-- ===== RELATIONSHIPS ===== -->
+
+  <!-- USER (1) to ACCOUNT (many) -->
+  <!-- Line from USER right edge to ACCOUNT left edge -->
+  <line x1="260" y1="190" x2="340" y2="163" stroke="#0F6E56" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <!-- 1 marker on USER side -->
+  <text x="270" y="185" fill="#0F6E56" font-size="12" font-weight="bold">1</text>
+  <!-- Many marker on ACCOUNT side -->
+  <text x="318" y="158" fill="#534AB7" font-size="12" font-weight="bold">N</text>
+  <text x="290" y="168" text-anchor="middle" fill="#555" font-size="11" font-style="italic">has</text>
+
+  <!-- ACCOUNT (1) to TRANSACTION (many) via account_id -->
+  <line x1="560" y1="163" x2="640" y2="163" stroke="#534AB7" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="566" y="158" fill="#534AB7" font-size="12" font-weight="bold">1</text>
+  <text x="618" y="158" fill="#185FA5" font-size="12" font-weight="bold">N</text>
+  <text x="600" y="178" text-anchor="middle" fill="#555" font-size="11" font-style="italic">sends</text>
+
+  <!-- ACCOUNT (1) to TRANSACTION (many) via target_account_id — curved below -->
+  <path d="M450 322 Q450 430 640 211" fill="none" stroke="#534AB7" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="448" y="420" fill="#534AB7" font-size="12" font-weight="bold">1</text>
+  <text x="632" y="208" fill="#185FA5" font-size="12" font-weight="bold">N</text>
+  <text x="560" y="390" text-anchor="middle" fill="#555" font-size="11" font-style="italic">receives</text>
+
+  <!-- ===== LEGEND ===== -->
+  <rect x="40" y="490" width="820" height="100" rx="8" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
+  <text x="60" y="514" font-weight="bold" fill="#1a1a1a" font-size="13">Legend</text>
+  <!-- PK -->
+  <rect x="60" y="524" width="12" height="12" fill="#0F6E56"/>
+  <text x="78" y="535" fill="#333" font-size="12">PK — Primary Key (unique row identifier)</text>
+  <!-- FK -->
+  <rect x="60" y="546" width="12" height="12" fill="#534AB7"/>
+  <text x="78" y="557" fill="#333" font-size="12">FK — Foreign Key (links to another table)</text>
+  <!-- Relationship line -->
+  <line x1="60" y1="572" x2="90" y2="572" stroke="#555" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="100" y="576" fill="#333" font-size="12">1 ——— N  One-to-many relationship</text>
+  <!-- Note -->
+  <text x="420" y="535" fill="#555" font-size="12">TRANSACTION.account_id → ACCOUNT.id  (sender)</text>
+  <text x="420" y="557" fill="#555" font-size="12">TRANSACTION.target_account_id → ACCOUNT.id  (receiver)</text>
+  <text x="420" y="579" fill="#555" font-size="12">ACCOUNT.user_id → USER.id</text>
+</svg>
