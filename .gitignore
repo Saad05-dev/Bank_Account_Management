@@ -1,0 +1,40 @@
+# Credentials & Environment
+**/application.properties
+**/application-*.properties
+**/application.yml
+**/application-*.yml
+.env
+*.env
+
+# Allow example/template files
+!**/application.properties.example
+!**/application-example.properties
+
+# Maven
+target/
+*.jar
+*.war
+
+
+# IDE - IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# IDE - Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# IDE - VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
