@@ -29,10 +29,13 @@ Update the src/main/resources/application.properties (or .yml) file with your da
 
 ```properties
 
-spring.datasource.url=jdbc:postgresql://localhost:5432/your_db
+spring.application.name=Bank_Account_Management
+spring.datasource.url=jdbc:mysql://localhost:5432/bank_db
 spring.datasource.username=your_user
 spring.datasource.password=your_password
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.jpa.hibernate.ddl-auto=update
+spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
 ```
 ### 3. Run the Application
 
