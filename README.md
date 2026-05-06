@@ -29,13 +29,23 @@ Update the src/main/resources/application.properties (or .yml) file with your da
 
 ```properties
 
-spring.application.name=Bank_Account_Management
-spring.datasource.url=jdbc:mysql://localhost:5432/bank_db
-spring.datasource.username=your_user
+spring.datasource.url=jdbc:mysql://localhost:3306/bank_db
+spring.datasource.username=your_username
 spring.datasource.password=your_password
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+# Enable SQL script execution
+spring.sql.init.mode=always
+spring.sql.init.schema-locations=classpath:docs/sql/db_schema.sql
+
+# JPA/Hibernate
 spring.jpa.hibernate.ddl-auto=update
-spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
+spring.jpa.show-sql=false
+spring.jpa.open-in-view=false
+
+# Clean logging
+logging.level.root=INFO
+logging.level.org.springframework=INFO
+logging.level.org.hibernate=WARN
 ```
 ### 3. Run the Application
 
@@ -60,15 +70,15 @@ mvnw.cmd spring-boot:run
 All diagrams are in `docs/diagrams/`.
 
 ### Entity relationship diagram
-![ERD](docs/diagrams/bank_db_erd.svg)
+![ERD](src/main/resources/docs/diagrams/bank_db_erd.svg)
 
 ### System architecture
-![Architecture](docs/diagrams/bank_app_architecture.svg)
+![Architecture](src/main/resources/docs/diagrams/bank_app_architecture.svg)
 
 ### Login & registration flow
-![Login flow](docs/diagrams/bank_login_flow.svg)
+![Login flow](src/main/resources/docs/diagrams/bank_login_flow.svg)
 
-> The SQL schema file is at `docs/sql/db_schema.sql`
+> The SQL schema file is at `src/main/resources/docs/sql/db_schema.sql`
 
 
 
