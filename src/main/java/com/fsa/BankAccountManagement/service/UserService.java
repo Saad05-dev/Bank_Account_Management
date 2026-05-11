@@ -22,9 +22,7 @@ public class UserService
     {
         Optional<User> userEmail = userRepo.findByEmail(user.getEmail());
         if(userEmail.isPresent())
-        {
             throw new RuntimeException("Email already exists");
-        }
         user.setPassword(passwordEnc.encode(user.getPassword()));
         return userRepo.save(user);
     }
@@ -33,14 +31,10 @@ public class UserService
     {
         Optional<User> found = userRepo.findByEmail(email);
         if(found.isEmpty())
-        {
-            throw new RuntimeException("User not found");
-        }   
+            throw new RuntimeException("User not found"); 
         User user = found.get();
         if(!passwordEnc.matches(password, user.getPassword()))
-        {
             throw new RuntimeException("Invalid password");
-        }
         return user;
     }
 }
