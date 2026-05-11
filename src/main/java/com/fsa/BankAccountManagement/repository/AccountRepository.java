@@ -9,5 +9,5 @@ import com.fsa.BankAccountManagement.model.User;
 
 public interface AccountRepository extends JpaRepository<Account, Long>
 {
-    List<Account> findByUser(User user);
+    public List<Account> findByUser(User user);
 }
